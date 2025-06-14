@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fefefe;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.header {
+    position: relative;
+    background: #fff;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.hero-section {
+    height: 500px;
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.navbar {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1.5rem 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-menu a.active,
+.nav-menu a:hover {
+    color: #8B4513;
+    background: rgba(139, 69, 19, 0.1);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #8B4513;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a.active::after,
+.nav-menu a:hover::after {
+    width: 80%;
+}
+
+
+.main-content {
+    background: #fff;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.section-divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(135deg, #8B4513, #D2691E);
+    margin: 0 auto 1rem;
+    border-radius: 2px;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.unesco-section {
+    background: #f8f6f3;
+}
+
+.unesco-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 0px;
+    min-height: 600px;
+}
+
+.unesco-image {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.unesco-image.goree {
+   background: linear-gradient(135deg, #4A90E2 0%, #357ABD 50%, #1E5F99 100%);
+    margin-bottom: 100%;
+    margin-right: 100%;
+}
+
+.unesco-info {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between*/;
+}
+
+.unesco-badge {
+    background: #4A90E2;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+   /* display: inline-block;*/
+    width: fit-content;
+    margin-bottom: 0px;
+}
+
+.unesco-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.unesco-date {
+    color: #8B4513;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.unesco-info p {
+    color: #555;
+    line-height: 1.7;
+   /* margin-bottom: 2rem;*/
+}
+
+.heritage-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.feature-tag {
+    background: #f0f0f0;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.visit-info {
+    background: #f8f6f3;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #8B4513;
+}
+
+.visit-item {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+
+.monuments-section {
+    background: white;
+}
+
+.monuments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.monument-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.monument-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/*.monument-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}*/
+
+.monument-image.renaissance {
+    background: linear-gradient/*(135deg, #FF6B35 0%, #F7931E 50%, #FFD23F 100%)*/;
+    height: 500px;
+    width: 500px; 
+}
+
+.monument-image.independence {
+    background: linear-gradient(135deg, #00B4DB 0%, #0083B0 100%);
+    height: 600px;
+    width: 800px;
+}
+
+.monument-image.grande-mosquee {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.monument-content {
+    padding: 2rem;
+}
+
+.monument-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.monument-year {
+    color: #8B4513;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.monument-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.monument-stats {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-number {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #8B4513;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.monument-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.monument-features span {
+    background: #f0f0f0;
+    padding: 0.3rem 0.8rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+
+.colonial-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.colonial-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.colonial-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #8B4513, #D2691E);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.timeline-item.reverse {
+    grid-template-columns: 1fr auto 1fr;
+}
+
+.timeline-item.reverse .timeline-content {
+    grid-column: 3;
+    text-align: left;
+}
+
+.timeline-item.reverse .timeline-image {
+    grid-column: 1;
+}
+
+.timeline-year {
+    grid-column: 2;
+    background: #8B4513;
+    color: white;
+    padding: 1rem;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.timeline-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.timeline-content h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.timeline-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+
+.footer {
+    background: #2c2c2c;
+    color: white;
+    padding: 3rem 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #f0c674;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #f0c674;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .unesco-card {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .timeline-item {
+        display: block;
+        text-align: center;
+    }
+
+    .timeline-item.reverse .timeline-content,
+    .timeline-item.reverse .timeline-image {
+        grid-column: unset;
+    }
+
+    .timeline-year {
+        margin: 2rem auto;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

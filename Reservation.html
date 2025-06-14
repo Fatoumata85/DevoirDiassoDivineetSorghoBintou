@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation d'hotel</title>
+    <link rel="stylesheet" href="styleform.css">
+</head>
+<body >
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="heritage.html" >Patrimoine</a></li>
+                <li><a href="Reservation.html" class="active">Réservation d'hôtel</a></li>
+                <li><a href="Galerie.html" >Galerie </a></li>
+            </ul>
+        </div>
+    </nav>
+    <form>
+        
+        <label>Nom complet :</label><br>
+        <input type ="text" name="nom" required><br><br>
+        
+        <label>Email :</label><br>
+        <input type="email" name="email"required><br><br>
+        
+        <label>nombre de personne :</label><br>
+        <input type="number" name="personnes" min="1"><br><br>
+
+        <label>date d'arriver : </label><br>
+        <input type="date" name="arrivee"><br><br>
+
+        <label>date de depart :</label><br>
+        <input type ="date" name="depart"><br><br>
+
+        <label>type de chambre :</label><br>
+        <select name="chambre">
+            <option>simple</option>
+            <option>Double</option>
+            <option>Suite</option>
+        </select><br><br>
+
+        <label>commentaire :</label><br>
+        <textarea name ="commentaire" rows="4" cols="30"></textarea><br><br>
+
+        <button type="submit">reservation</button>
+    </form>
+</body>
+</html>
